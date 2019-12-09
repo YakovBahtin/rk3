@@ -1,0 +1,27 @@
+CREATE DATABASE DB;
+
+#Бахтин Яков Ильич Вариант 11 ИУ4-13Б
+
+#TASK 1;
+
+CREATE TABLE `DB` (
+`NAME` VARCHAR(50),
+`MANUFACTURER` VARCHAR(50),
+`DESCRIPTION` VARCHAR(500),
+`COUNT` INT(6)) DEFAULT CHARSET = UTF8;
+
+INSERT INTO DB (`NAME`,`MANUFACTURER`,`DESCRIPTION`,`COUNT`) VALUES
+('Gele','GuideTM','Гелье','1277'),
+('KDele','GuideTM','Делье','456'),
+('KWele','FuideTM','Велье','1'),
+('KFele','FuideTM','Фелье','2277'),
+('KPele','MuideTM','Пелье','371'),
+('Ile','MuideTM','Илье','0'),
+('Yele','GuideTM','Йелье','1243'),
+('Rele','GuideTM','Релье','0'),
+('KBele','GuideTM','Бельё','177'),
+('KMele','MuideTM','Мелье','12');
+#TASK 2;
+DELETE * FROM DB WHERE `COUNT` = 0;
+#TASK 3;
+SELECT * FROM DB WHERE `NAME` = 'K%' AND (`COUNT` > 300 AND `COUNT` < 1000);
